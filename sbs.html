@@ -50,6 +50,17 @@
 	<![endif]-->
 	
 		<style>
+			button.navbar-toggle {
+			width: -webkit-fill-available;
+    background: #333 !important;
+    color: #ffff;
+}
+			nav.navbar-nav.nav {
+    height: -webkit-fill-available;
+}
+			.navbar-header{
+				background-color: #37393d;
+			}
 			@media only screen and (max-width: 600px) {
   
 }
@@ -94,7 +105,7 @@
 			<nav style="height: -webkit-fill-available;" class="navbar navbar-default"> 
 			 
 			  <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-respo"> <span class="sr-only icon-navicon"></span> </button>
+				<button style="background: #333 !important;" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-respo"> <span class="sr-only icon-navicon"></span> </button>
 			  </div>
 			  <div style="    background: #37393d;" class="collapse navbar-collapse" id="nav-respo">
 				<ul class="nav navbar-nav">
@@ -491,7 +502,15 @@
 		  }
 		}
 		
-
+		document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click" toggleF);
+		function  toggleF(){
+			if(ocument.querySelector("#nav-respo").classList=="navbar-collapse collapse"){
+				document.querySelector("#nav-respo").classList.add("in");
+			}
+			else{
+				document.querySelector("#nav-respo").classList.remove("in");
+			}
+		}
 		
 		</script>
 	
@@ -507,14 +526,14 @@
 				width: 50%;
 			" class="img-responsive img-center" alt="">
 						<ul class="social_icons" style="
-    text-align: center;
-    margin-block-start: 2rem;
-">
+						text-align: initial;
+						margin-inline-start: 2rem;
+					">
 					<li class="twitter"><a href="#small-dialog" class="zoom popup-with-move-anim"><i class="icon-twitter"></i></a></li>
 					<li class="facebook"><a href="#."><i class="icon-facebook2"></i></a></li>
-					<li class="twitter"><a href="#."><i class="icon-telegram"></i></a></li>
+					<li class="twitter"><a href="#."><i class="icon-paperplane"></i></a></li>
 					<li class="blogger"><a href="#."><i class="icon-instagram"></i></a></li>
-					<li class="vimeo"><a href="#."><i class="icon-youtube"></i></a></li>
+					<li class="vimeo"><a href="#."><i class="icon-rss"></i></a></li>
 				  </ul>
 					</div>
 					<div class="col-md-3">

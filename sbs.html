@@ -511,12 +511,16 @@
 		</script>
 	<script>
 		function  toggleF(){
-			if(document.querySelector("#nav-respo").classList=="collapse navbar-collapse"){
+			setTimeout(() => {
+  console.log("Delayed for 1 second.");
+  if(document.querySelector("#nav-respo").classList=="collapse navbar-collapse"){
 				document.querySelector("#nav-respo").classList.add("in");
 			}
 			if(document.querySelector("#nav-respo").classList=="collapse navbar-collapse in"){
 				document.querySelector("#nav-respo").classList.remove("in");
 			}
+}, "1000")
+			
 		}document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click", toggleF);
 		
 	</script>

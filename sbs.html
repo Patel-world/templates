@@ -510,7 +510,6 @@
 		
 		</script>
 	<script>
-		document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click" toggleF);
 		function  toggleF(){
 			if(document.querySelector("#nav-respo").classList=="navbar-collapse collapse"){
 				document.querySelector("#nav-respo").classList.add("in");
@@ -518,7 +517,8 @@
 			else{
 				document.querySelector("#nav-respo").classList.remove("in");
 			}
-		}
+		}document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click", toggleF)
+		
 	</script>
 
 	<!-- FOOTER -->

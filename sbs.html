@@ -78,16 +78,6 @@
 }
 
 		</style>
-		<script>
-			function  toggleF(){
-			if(document.querySelector("#nav-respo").classList=="navbar-collapse collapse"){
-				document.querySelector("#nav-respo").classList.add("in");
-			}
-			else{
-				document.querySelector("#nav-respo").classList.remove("in");
-			}
-		}document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click", toggleF);
-		</script>
 </head>
 <body>
 
@@ -115,7 +105,7 @@
 			<nav style="height: -webkit-fill-available;" class="navbar navbar-default"> 
 			 
 			  <div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-target="#nav-respo" style="
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-respo" style="
     width: -webkit-fill-available;
     background: #333 !important;
     color: #ffff;
@@ -527,7 +517,7 @@
 			else{
 				document.querySelector("#nav-respo").classList.remove("in");
 			}
-		}
+		}document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click", toggleF);
 		
 	</script>
 

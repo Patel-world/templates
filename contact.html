@@ -152,7 +152,7 @@
 				<form class="o-form positioned" id="contactForm" action="{% url 'send_mail' %}" method="POST">
 					{% csrf_token %}
 					<input name="name" id="senderName" required="required" type="text" placeholder="Name*">
-					<input type="subject" name="senderEmail" id="senderEmail" required="required" placeholder="Email*">
+					<input type="email" name="subject" id="senderEmail" required="required" placeholder="Email*">
 				
 					<textarea name="message" id="message"></textarea>
 					<button onmousedown="party.confetti(this)" type="submit" class="btn-small btn-center">Send</button>

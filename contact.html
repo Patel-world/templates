@@ -169,33 +169,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container home-lookbook shortcode-content">
-		<div class="row">
-			<div class="col-md-12">
-				<h3 class="uppercase">Events <span></span></h3>
-			</div>
-			<div class="clearfix"></div>
-			<div class="row">
-				<form action="{% url 'send_mail' %}" method="POST">
-					{% csrf_token %}
-					<div>
-					   
-						<input id="name" name="name" type="text" placeholder="name">
-					</div>
-					<div>
-						
-						<input id="sbj" name="subject" type="email" placeholder="email">
-					</div>
-					<div>
-					   
-						<textarea id="msg" name="message" type="text" placeholder="message"></textarea>
-					</div>
-					<button type="submit" class="btn-hover color-3 legitRipple">Submit <i class="icon-paperplane"></i></button>
-					
-				</form>
-			</div>
-		</div>
-	</div>
+
 
 	
 

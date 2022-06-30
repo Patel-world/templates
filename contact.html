@@ -125,7 +125,7 @@
 					  
 					</li>
 					
-					  <li class="active"><a class="active" href="{% url 'about' %}">
+					  <li><a href="{% url 'about' %}">
 						  About Us
 						   </span> </a>
 					  
@@ -134,7 +134,7 @@
 					   </a></li>
 					<li> <a href="{% url 'gallery' %}"> Photo Gallery
 					   </a></li>
-					<li> <a href="{% url 'contact' %}"> Contact Us </a></li>
+					<li class="active"> <a class="active" href="{% url 'contact' %}"> Contact Us </a></li>
 				  
 				  </ul>
 			  </div>
@@ -144,7 +144,31 @@
 	  </header>
 	<!-- HEADER -->
 	
-
+	<div class="container contact-content">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h3>Contact</h3>
+				<div class="space70"></div>
+				<form class="o-form positioned" id="contactForm" action="{% url 'send_mail' %}" method="POST">
+					{% csrf_token %}
+					<input name="senderName" id="senderName" required="required" type="text" placeholder="Name*">
+					<input type="email" name="senderEmail" id="senderEmail" required="required" placeholder="Email*">
+				
+					<textarea name="message" id="message"></textarea>
+					<button type="submit" class="btn-small btn-center">Send</button>
+				</form>
+				<div id="successMessage" class="successmessage">
+					<p><span class="success-ico"><i class="icon-check"></i></span> Thanks for sending your message! We'll get back to you shortly.</p>
+				</div>
+				<div id="failureMessage" class="errormessage">
+					<p><span class="error-ico"><i class="icon-close-circle"></i></span> There was a problem sending your message. Please try again.</p>
+				</div>
+				<div id="incompleteMessage" class="statusMessage">
+					<p>Please complete all the fields in the form before sending.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container home-lookbook shortcode-content">
 		<div class="row">
 			<div class="col-md-12">

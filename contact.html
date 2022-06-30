@@ -84,7 +84,7 @@
 }
 
 		</style>
-		
+	<script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
 <body>
 
@@ -151,11 +151,11 @@
 				<div class="space70"></div>
 				<form class="o-form positioned" id="contactForm" action="{% url 'send_mail' %}" method="POST">
 					{% csrf_token %}
-					<input name="senderName" id="senderName" required="required" type="text" placeholder="Name*">
-					<input type="email" name="senderEmail" id="senderEmail" required="required" placeholder="Email*">
+					<input name="name" id="senderName" required="required" type="text" placeholder="Name*">
+					<input type="subject" name="senderEmail" id="senderEmail" required="required" placeholder="Email*">
 				
 					<textarea name="message" id="message"></textarea>
-					<button type="submit" class="btn-small btn-center">Send</button>
+					<button onmousedown="party.confetti(this)" type="submit" class="btn-small btn-center">Send</button>
 				</form>
 				<div id="successMessage" class="successmessage">
 					<p><span class="success-ico"><i class="icon-check"></i></span> Thanks for sending your message! We'll get back to you shortly.</p>
@@ -202,6 +202,12 @@
 			}
 		}document.querySelector("#navbar > nav > nav > div.navbar-header > button").addEventListener("click", toggleF);
 		
+	</script>
+	<script>
+		party.confetti(runButton, {
+	count: party.variation.range(100, 40),
+});
+        
 	</script>
 
 	<!-- FOOTER -->
